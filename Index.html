@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2775.1">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="zh-HK"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="bg-gray-100 p-8 font-sans flex justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-md w-full bg-white rounded-lg shadow-2xl overflow-hidden border border-gray-200"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- 頂部標頭 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="bg-purple-700 text-white text-center py-3 text-sm tracking-widest font-bold"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>香港中文大學校友及學生專屬幸運大抽獎</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex justify-between items-center mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-2xl font-bold text-gray-900"&gt;贏取豐富獎品！&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded animate-pulse"&gt;100% 中獎率&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p id="top-instruction" class="text-sm text-gray-600 mb-4"&gt;感謝您協助填寫問卷！點擊下方按鈕即可立即抽取您的保證最高大獎！&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- 進度條 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="progress-container" class="w-full bg-gray-200 rounded-full h-2 mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-purple-600 h-2 rounded-full transition-all duration-500" id="progress-bar" style="width: 25%"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- 第 1 步：直接開始抽獎 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="step-1" class="step-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-purple-50 border border-purple-200 p-4 rounded-lg mb-6 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-purple-900 font-medium"&gt;本期大獎：&lt;strong&gt;$100 超市現金券&lt;/strong&gt;（保證 100% 中獎）&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="goToStep(2)" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded mb-3 shadow text-base transition-colors"&gt;立即點擊抽獎&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="exitSimulation(1)" class="w-full text-gray-400 hover:text-gray-600 text-sm underline pb-2"&gt;離開網站&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- 第 2 步：直接揭曉最高大獎 ($100 禮券) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="step-2" class="step-content" style="display: none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-yellow-50 border-2 border-yellow-400 p-5 rounded-lg mb-6 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-3xl block mb-2"&gt;🎉 🏆 ✨&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold text-yellow-800 mb-1"&gt;恭喜您！中大獎了！&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-700 font-semibold mt-2"&gt;您抽中了本期最高大獎：&lt;br&gt;&lt;span class="text-red-600 font-bold text-lg"&gt;100 港元超級市場現金券！&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="goToStep(3)" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded mb-2 shadow"&gt;下一步：選擇收件方式&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="prevStep()" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded mb-3 text-sm"&gt;上一步&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="exitSimulation(2)" class="w-full text-gray-400 hover:text-gray-600 text-sm underline pb-2"&gt;離開網站&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- 第 3 步：收件方式選擇（測試是否願意支付 $10 順豐運費） --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="step-3" class="step-content" style="display: none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="font-bold text-gray-800 mb-2"&gt;第三步：選擇收件與運送方式&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-sm text-gray-600 mb-3"&gt;請選擇您希望如何收取此 $100 現金券：&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="space-y-2 mb-3 text-sm text-gray-700 pl-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label class="flex items-center cursor-pointer"&gt;&lt;input type="radio" id="delivery-sf" name="delivery" class="mr-2 accent-purple-600" checked&gt; 順豐速遞寄送 (需付 $10 順豐運費)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label class="flex items-center cursor-pointer"&gt;&lt;input type="radio" id="delivery-pickup" name="delivery" class="mr-2 accent-purple-600"&gt; 親臨中大校園領取 (免運費，約需時 1-2 個月)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-xs text-gray-500 mb-6 bg-gray-50 p-2 rounded"&gt;註：選擇順豐速遞可於 2-3 個工作天內快速送達。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="proceedFromStep3()" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded mb-2 shadow"&gt;確認領取方式&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="prevStep()" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded mb-3 text-sm"&gt;上一步&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="exitSimulation(3)" class="w-full text-gray-400 hover:text-gray-600 text-sm underline pb-2"&gt;離開網站&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- 第 4 步：PayMe 結算陷阱（支付 $10 順豐運費） --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="step-4" class="step-content" style="display: none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="font-bold text-gray-800 mb-2"&gt;第四步：支付順豐運費 (HK$10)&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-sm text-gray-600 mb-4"&gt;請透過下方安全通道支付 10 港元順豐運費以安排寄出。&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-gray-50 border p-4 rounded text-center mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-xs font-bold text-blue-600 block mb-1"&gt;PAYME 安全支付閘口&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-lg font-bold text-gray-800"&gt;應付金額：HK$10.00&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="triggerDebrief('Completed (PayMe SF Step)')" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded text-lg shadow-lg mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>透過 PayMe 支付 HK$10 並領取禮券</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="prevStep()" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded mb-3 text-sm"&gt;上一步&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="exitSimulation(4)" class="w-full text-gray-400 hover:text-gray-600 text-sm underline pb-2"&gt;離開網站&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- 第 5 步：校園自取登記完成（若選免運費自取） --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="step-5" class="step-content" style="display: none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-green-50 border-2 border-green-400 p-5 rounded-lg mb-6 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-3xl block mb-2"&gt;✅&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold text-green-800 mb-1"&gt;登記成功！&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-700 mt-2"&gt;感謝您的配合。我們已記錄您的自取偏好，將於 1-2 個月內透過電郵通知您領取詳情。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="triggerDebrief('Completed (Pickup)')" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded mb-3 shadow"&gt;完成並查看研究說明&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- 第 6 步：事後說明與返回問卷引導 (Debriefing &amp; Return) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="step-6" class="step-content" style="display: none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-purple-50 border-2 border-purple-300 p-5 rounded-lg mb-5 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-3xl block mb-2"&gt;🙏&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-lg font-bold text-purple-900 mb-1"&gt;感謝您的寶貴時間與參與！&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-xs text-gray-700 leading-relaxed mt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>這其實是香港中文大學社會心理學研究的一部分。我們旨在觀察參與者在面對最高獎勵時，是否願意為了便利而支付小額運費（了解順從心理與沉沒成本）。</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mt-4 bg-white p-3 rounded border border-purple-200 text-xs text-gray-800 text-left"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;&lt;strong&gt;您的診斷數據：&lt;/strong&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="mt-1"&gt;• 最終狀態 / 離開步驟：&lt;span id="stat-status" class="font-bold text-purple-700"&gt;&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;• 總停留時間：&lt;span id="stat-time" class="font-bold text-purple-700"&gt;&lt;/span&gt; 秒&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="finalFinish()" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2.5 px-4 rounded text-sm shadow"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>完成並提示返回問卷</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let startTime = Date.now();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let historyStack = [1];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let finalStatusRecorded = "Completed";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let recordedTimeSpent = "0.00";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function goToStep(stepNumber) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>historyStack.push(stepNumber);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>displayStep(stepNumber);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function prevStep() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (historyStack.length &gt; 1) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>historyStack.pop();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let previousStep = historyStack[historyStack.length - 1];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>displayStep(previousStep);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function displayStep(stepNumber) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>for (let i = 1; i &lt;= 6; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let el = document.getElementById('step-' + i);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (el) el.style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let target = document.getElementById('step-' + stepNumber);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (target) target.style.display = 'block';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (stepNumber === 6) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let pb = document.getElementById('progress-container');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let ti = document.getElementById('top-instruction');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (pb) pb.style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (ti) ti.style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let progress = Math.min((stepNumber / 5) * 100, 100);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('progress-bar').style.width = progress + '%';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function proceedFromStep3() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let sfSelected = document.getElementById('delivery-sf').checked;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (sfSelected) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>goToStep(4); // 選擇順豐 -&gt; 進入 PayMe $10 運費陷阱</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>goToStep(5); // 選擇校園自取 -&gt; 進入完成登記頁面</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function exitSimulation(stepNumber) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>triggerDebrief(`在第 ${stepNumber} 步離開`);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function triggerDebrief(status) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>finalStatusRecorded = status;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>recordedTimeSpent = ((Date.now() - startTime) / 1000).toFixed(2);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('stat-status').innerText = finalStatusRecorded;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('stat-time').innerText = recordedTimeSpent;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>goToStep(6);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const _originalFinalFinish = function() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>alert(`數據已記錄完成！\n\n- 狀態：${finalStatusRecorded}\n- 停留時間：${recordedTimeSpent} 秒\n\n請關閉此分頁，返回問卷填寫對應欄位。`);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const RETURN_URL = "";<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function returnToSurvey() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (RETURN_URL) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>window.location.href = RETURN_URL;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (window.opener &amp;&amp; !window.opener.closed) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>try { window.opener.focus(); } catch (e) {}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>window.close();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>setTimeout(showManualReturnMessage, 400);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (window.parent &amp;&amp; window.parent !== window) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>window.parent.postMessage({ action: 'returnToSurvey' }, '*');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (window.history.length &gt; 1) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>window.history.back();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>showManualReturnMessage();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function showManualReturnMessage() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>var overlay = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overlay.style.cssText =</p>
+<p class="p1"><span class="Apple-converted-space">                </span>'position:fixed;inset:0;background:rgba(255,255,255,0.97);z-index:9999;' +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>'display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;' +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>'font-family:system-ui,-apple-system,"PingFang HK","Microsoft JhengHei",sans-serif;';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overlay.innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">                </span>'&lt;div&gt;' +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>'&lt;p style="font-size:18px;font-weight:700;color:#5b21b6;margin-bottom:12px;"&gt;感謝您的參與！&lt;/p&gt;' +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>'&lt;p style="font-size:14px;color:#374151;line-height:1.8;"&gt;' +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>'請關閉此分頁，返回原本的問卷頁面&lt;br&gt;繼續填寫餘下的問題。' +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>'&lt;/p&gt;' +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>'&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.body.appendChild(overlay);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.finalFinish = function () {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>_originalFinalFinish();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>returnToSurvey();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
